@@ -1,14 +1,14 @@
 context:
   name: streamlit-pydantic
-  version: "0.6.0"
+  version: "0.6.1rc3"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 3bc5d51af085eb6791b360f569f1a541681ddcc51579b09a1e2ab54639b39d49
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: 466ea21025a25904ac0f8ce84212cc5bc7bf1d874d85960c305b57eafff023c7
 
 build:
   noarch: python
@@ -23,8 +23,12 @@ requirements:
     - hatch-vcs
   run:
     - python >=${{ python_min }}
-    - streamlit >=1.14.0
-    - pydantic >=1.9,<2
+    - streamlit >=1.30.0
+    - pydantic >=2.0
+    - pydantic-settings >=2.0
+    - pydantic-extra-types >=2.6.0
+    # uses pydantic[email]
+    - email-validator >=2.0.0
 
 tests:
   - python:
