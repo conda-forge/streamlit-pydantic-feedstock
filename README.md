@@ -36,14 +36,14 @@ Current release info
 Installing streamlit-pydantic
 =============================
 
-Installing `streamlit-pydantic` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `streamlit-pydantic` from the `conda-forge/label/streamlit-pydantic_rc` channel can be achieved by adding `conda-forge/label/streamlit-pydantic_rc` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/streamlit-pydantic_rc
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `streamlit-pydantic` can be installed with `conda`:
+Once the `conda-forge/label/streamlit-pydantic_rc` channel has been enabled, `streamlit-pydantic` can be installed with `conda`:
 
 ```
 conda install streamlit-pydantic
@@ -58,26 +58,26 @@ mamba install streamlit-pydantic
 It is possible to list all of the versions of `streamlit-pydantic` available on your platform with `conda`:
 
 ```
-conda search streamlit-pydantic --channel conda-forge
+conda search streamlit-pydantic --channel conda-forge/label/streamlit-pydantic_rc
 ```
 
 or with `mamba`:
 
 ```
-mamba search streamlit-pydantic --channel conda-forge
+mamba search streamlit-pydantic --channel conda-forge/label/streamlit-pydantic_rc
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search streamlit-pydantic --channel conda-forge
+mamba repoquery search streamlit-pydantic --channel conda-forge/label/streamlit-pydantic_rc
 
 # List packages depending on `streamlit-pydantic`:
-mamba repoquery whoneeds streamlit-pydantic --channel conda-forge
+mamba repoquery whoneeds streamlit-pydantic --channel conda-forge/label/streamlit-pydantic_rc
 
 # List dependencies of `streamlit-pydantic`:
-mamba repoquery depends streamlit-pydantic --channel conda-forge
+mamba repoquery depends streamlit-pydantic --channel conda-forge/label/streamlit-pydantic_rc
 ```
 
 
