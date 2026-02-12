@@ -25,6 +25,7 @@ requirements:
     - python >=${{ python_min }}
     - streamlit >=1.14.0
     - pydantic >=1.9,<2
+    - importlib-resources
 
 tests:
   - python:
