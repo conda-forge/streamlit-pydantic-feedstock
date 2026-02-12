@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   script: python -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -25,13 +25,14 @@ requirements:
     - python >=${{ python_min }}
     - streamlit >=1.14.0
     - pydantic >=1.9,<2
+    - importlib-resources
 
 tests:
   - python:
       imports:
       - streamlit_pydantic
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version: ${{ python_min }}.*
 
 about:
   homepage: https://github.com/lukasmasuch/streamlit-pydantic
